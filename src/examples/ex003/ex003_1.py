@@ -1,8 +1,7 @@
-from typing import TypedDict, Annotated
-from rich import print
-from langgraph.graph import END, START, StateGraph, add_messages
-import operator
+from typing import Annotated, TypedDict
 
+from langgraph.graph import END, START, StateGraph, add_messages
+from rich import print
 
 # reducer - função que vai juntar a (resultado anterior) + b (o resultado que está gerando agora)
 # def reducer(a: list[str], b: list[str]) -> list[str]:

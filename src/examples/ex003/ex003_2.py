@@ -2,8 +2,8 @@ import operator
 from dataclasses import dataclass
 from typing import Annotated, Literal
 
-from rich import print as rprint
 from langgraph.graph import END, START, StateGraph
+from rich import print as rprint
 
 
 @dataclass
@@ -30,8 +30,11 @@ def node_c(state: State) -> State:
     return output_state
 
 
+limit_for_c = 50
+
+
 def the_conditional(state: State) -> Literal["B", "C"]:
-    if state.current_number >= 50:
+    if state.current_number >= limit_for_c:
         return "C"
     return "B"
 
